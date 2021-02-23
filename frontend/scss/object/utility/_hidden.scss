@@ -1,0 +1,28 @@
+@use "../../foundation/global";
+
+//== Hidden for media query
+// @example html
+// <p class="u-sp-only">768px以上の幅で非表示</p>
+// <p class="u-pc-pnly">767px以下の幅で非表示</p>
+
+
+.u-sp-only {
+  @include global.mq(md, min) {
+    display: none;
+  }
+}
+
+.u-pc-only {
+  @include global.mq(md) {
+    display: none;
+  }
+}
+
+//== Hidden for all
+.u-hidden {
+  display: none;
+}
+
+.u-visually-hidden {
+  @include global.visually-hidden;
+}
